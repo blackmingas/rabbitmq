@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: spring_amqp
+
+  profiles:
+    active: usages_messages
+
+logging:
+  level:
+    org: error
+
+tutorial:
+  client:
+    duration: 60000

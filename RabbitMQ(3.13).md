@@ -124,6 +124,28 @@
 
 ​	日志默认安装时存放位置为：/var/log/rabbitmq
 
+### Windows
+
+1. 先以管理员身份安装64位的erlang，否则rabbitmq windows服务将无法发现它，需要将安装的bin目录加入到环境变量中去
+
+2. 安装rabbitmq
+
+   ~~~ html
+   https://www.rabbitmq.com/docs/install-windows#chocolatey
+   ~~~
+
+3. 安装成功后，在安装目录的sbin目录下，打开cmd，运行下面的命令
+
+   ~~~ shell
+   rabbitmq-plugins enable rabbitmq_management
+   ~~~
+
+   然后重启服务，在浏览器输入[http://127.0.0.1:15672](http://127.0.0.1:15672/)
+
+   账号：guest 密码：guest 即可使用页面进行管理rabbitmq
+
+   ![image-20240915203811356](./assets/image-20240915203811356.png)
+
 ## JAVA
 
 RabbitMQ is a post box(邮箱), a post office（邮局）, and a letter carrier（快递员）.
@@ -167,4 +189,8 @@ RabbitMQ is a post box(邮箱), a post office（邮局）, and a letter carrier�
 
 
 ## SPRING AMQP
+
+~~~ html
+https://www.rabbitmq.com/tutorials/tutorial-one-spring-amqp#receiving
+~~~
 
